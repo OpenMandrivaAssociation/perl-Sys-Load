@@ -9,6 +9,7 @@ Url:		http://search.cpan.org/dist/%{module}/
 License:	Artistic
 Group:		Development/Perl
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 getload() returns 3 elements: representing load averages over 
