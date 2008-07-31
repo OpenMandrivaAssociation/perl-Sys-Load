@@ -3,7 +3,7 @@
 Summary:	A perl5 module that indicate system load
 Name:		perl-Sys-Load
 Version:	0.2
-Release:	%mkrel 6
+Release:	%mkrel 7
 Source0:	http://search.cpan.org/CPAN/authors/id/B/BA/BARABAS/%{module}-%{version}.tar.gz
 Url:		http://search.cpan.org/dist/%{module}/
 License:	Artistic
