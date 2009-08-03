@@ -1,15 +1,18 @@
-%define module Sys-Load
+%define upstream_name    Sys-Load
+%define upstream_version 0.2
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	A perl5 module that indicate system load
-Name:		perl-Sys-Load
-Version:	0.2
-Release:	%mkrel 7
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BA/BARABAS/%{module}-%{version}.tar.gz
-Url:		http://search.cpan.org/dist/%{module}/
 License:	Artistic
 Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/B/BA/BARABAS/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 getload() returns 3 elements: representing load averages over 
@@ -18,7 +21,7 @@ uptime() returns the system uptime in seconds. Returns 0 on
 failure.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 # Remove Local from path
 find . -type f | xargs perl -p -i -e "s|/usr/local/|/usr/|g"
@@ -49,4 +52,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/Sys/Load/Load.so
 %{perl_vendorarch}/Sys/Load.pm
 %{_mandir}/man3/*
-
