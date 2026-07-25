@@ -2,14 +2,14 @@
 %define upstream_version 0.2
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	6
+Version:    %{upstream_version}
+Release:	7
 
 Summary:	A perl5 module that indicate system load
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BA/BARABAS/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Sys-Load
+Source0:	https://cpan.metacpan.org/authors/id/B/BA/BARABAS/Sys-Load-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
