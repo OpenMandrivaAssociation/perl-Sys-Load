@@ -1,15 +1,13 @@
 %define upstream_name    Sys-Load
-%define upstream_version 0.2
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	7
+Version:    0.2
+Release:	8
 
 Summary:	A perl5 module that indicate system load
 License:	Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Sys-Load
-Source0:	https://cpan.metacpan.org/authors/id/B/BA/BARABAS/Sys-Load-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BA/BARABAS/Sys-Load-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ uptime() returns the system uptime in seconds. Returns 0 on
 failure.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 # Remove Local from path
 find . -type f | xargs perl -p -i -e "s|/usr/local/|/usr/|g"
@@ -69,9 +67,7 @@ rm -rf %{buildroot}
 - rebuild
 
   + Jérôme Quelin <jquelin@mandriva.org>
-    - rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.2-7mdv2009.0
+    - rebuild using %0.2 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.2-7mdv2009.0
 + Revision: 258423
 - rebuild
 
